@@ -2,6 +2,12 @@
 
 A comprehensive Caves of Qud mod that introduces powerful elite and ultimate variants of creatures, adding challenging encounters and exciting rewards to your adventures.
 
+## Download
+
+**Steam Workshop**: [Subscribe on Steam](https://steamcommunity.com/sharedfiles/filedetails/?id=3672491039)
+
+**GitHub**: [Download Latest Release](https://github.com/SattaRIP/elite-ultimate-variants/releases)
+
 ## Features
 
 ### Elite Variants
