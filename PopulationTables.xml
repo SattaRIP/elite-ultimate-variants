@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<populations>
+
+  <!-- Elite Variant Encounters for Tier 7 Caves -->
+  <population Name="Tier7CavePopulation" Load="Merge">
+    <group Name="Contents" Style="pickone" Load="Merge">
+      <group Name="Creatures" Style="pickone" Load="Merge">
+        <!-- Add elite variant spawners with moderate weight -->
+        <object Weight="10" Number="1" Blueprint="EliteVariantSpawn" />
+      </group>
+    </group>
+  </population>
+
+  <!-- Elite Variant Encounters for Tier 8 Caves -->
+  <population Name="Tier8CavePopulation" Load="Merge">
+    <group Name="Contents" Style="pickone" Load="Merge">
+      <group Name="Creatures" Style="pickone" Load="Merge">
+        <!-- Add elite variant spawners with higher weight -->
+        <object Weight="12" Number="1" Blueprint="EliteVariantSpawn" />
+      </group>
+    </group>
+  </population>
+
+  <!-- Elite Variant Encounters for Tier 7 Ruins -->
+  <population Name="Tier7RuinsCreatures" Load="Merge">
+    <object Weight="8" Number="1" Blueprint="EliteVariantSpawn" />
+  </population>
+
+  <!-- Elite Variant Encounters for Tier 8 Ruins -->
+  <population Name="Tier8RuinsCreatures" Load="Merge">
+    <object Weight="10" Number="1" Blueprint="EliteVariantSpawn" />
+  </population>
+
+  <!-- Add to generic high-tier encounters -->
+  <population Name="TierXCaveEncounters" Load="Merge">
+    <group Name="Contents" Style="pickone" Load="Merge">
+      <object Weight="6" Number="1" Blueprint="EliteVariantSpawn" />
+    </group>
+  </population>
+
+  <!-- ===== ELITE ARMY ENCOUNTERS ===== -->
+
+  <!-- Tier 5 Cave - Small Squads -->
+  <population Name="Tier5CavePopulation" Load="Merge">
+    <group Name="Contents" Style="pickone" Load="Merge">
+      <group Name="Creatures" Style="pickone" Load="Merge">
+        <object Weight="2" Number="1" Blueprint="EliteArmySpawn_Small" />
+      </group>
+    </group>
+  </population>
+
+  <!-- Tier 6 Cave - Small Squads and Patrols -->
+  <population Name="Tier6CavePopulation" Load="Merge">
+    <group Name="Contents" Style="pickone" Load="Merge">
+      <group Name="Creatures" Style="pickone" Load="Merge">
+        <object Weight="2" Number="1" Blueprint="EliteArmySpawn_Small" />
+        <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Medium" />
+      </group>
+    </group>
+  </population>
+
+  <!-- Tier 7 Cave - All Army Types (updated to add armies) -->
+  <population Name="Tier7CavePopulation" Load="Merge">
+    <group Name="Contents" Style="pickone" Load="Merge">
+      <group Name="Creatures" Style="pickone" Load="Merge">
+        <object Weight="2" Number="1" Blueprint="EliteArmySpawn_Small" />
+        <object Weight="2" Number="1" Blueprint="EliteArmySpawn_Medium" />
+        <object Weight="2" Number="1" Blueprint="EliteArmySpawn_Large" />
+      </group>
+    </group>
+  </population>
+
+  <!-- Tier 8 Cave - Endgame Armies (updated to add armies) -->
+  <population Name="Tier8CavePopulation" Load="Merge">
+    <group Name="Contents" Style="pickone" Load="Merge">
+      <group Name="Creatures" Style="pickone" Load="Merge">
+        <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Medium" />
+        <object Weight="2" Number="1" Blueprint="EliteArmySpawn_Large" />
+        <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Epic" />
+        <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Titans" />
+      </group>
+    </group>
+  </population>
+
+  <!-- Tier 5 Ruins - Small Squads -->
+  <population Name="Tier5RuinsCreatures" Load="Merge">
+    <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Small" />
+  </population>
+
+  <!-- Tier 6 Ruins - Small and Medium Armies -->
+  <population Name="Tier6RuinsCreatures" Load="Merge">
+    <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Small" />
+    <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Medium" />
+  </population>
+
+  <!-- Tier 7 Ruins - All Army Types -->
+  <population Name="Tier7RuinsCreatures" Load="Merge">
+    <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Small" />
+    <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Medium" />
+    <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Large" />
+  </population>
+
+  <!-- Tier 8 Ruins - Endgame Armies -->
+  <population Name="Tier8RuinsCreatures" Load="Merge">
+    <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Medium" />
+    <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Large" />
+    <object Weight="1" Number="1" Blueprint="EliteArmySpawn_Epic" />
+  </population>
+
+</populations>

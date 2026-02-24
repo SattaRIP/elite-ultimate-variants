@@ -1,0 +1,53 @@
+# Compiled DLL (may be regenerated)
+*.dll
+
+# Visual Studio / MonoDevelop
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.csproj.user
+bin/
+obj/
+
+# Build artifacts
+*.exe
+*.pdb
+*.cache
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*~
+
+# Backup and development files
+*.backup
+*.broken
+*.disabled
+*_backup
+CRASH_FIX.md
+
+# Logs
+*.log
+
+# Steam Workshop files (generated)
+.workshop/
+workshop_preview.png
+workshop_id.txt
+
+# User-specific mod data
+PlayerData/
+SaveData/
+
+# IDE specific
+.idea/
+.vscode/
+*.code-workspace

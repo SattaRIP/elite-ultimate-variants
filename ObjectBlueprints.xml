@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<objects>
+
+  <!-- Base Elite Variant Spawner (invisible trigger object) -->
+  <object Name="BaseEliteVariantSpawn" Inherits="Object">
+    <part Name="Render" DisplayName="elite variant spawn point" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteVariantSpawner" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- Elite Variant Spawner (Tier 8) - Random tier based on zone -->
+  <object Name="EliteVariantSpawn" Inherits="BaseEliteVariantSpawn">
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <!-- Ultimate Variant Spawner (Tier 8) - Always ultimate tier -->
+  <object Name="UltimateVariantSpawn" Inherits="BaseEliteVariantSpawn">
+    <part Name="EliteVariantSpawner" ForceUltimate="true" />
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <!-- Settings Wish Commands -->
+  <object Name="EliteVariantsSettings" Inherits="Object">
+    <part Name="Render" DisplayName="Show Elite Variants Settings" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteVariantsShowSettings" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="EliteVariantsPower1.5" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteVariantsPower15" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="EliteVariantsPower2.0" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteVariantsPower20" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="EliteVariantsLevel+10" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteVariantsLevel10" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="EliteVariantsUltimate100" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteVariantsUltimate100" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="EliteVariantsReset" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteVariantsReset" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- Elite Spawn Controller - Persistent singleton for natural spawning -->
+  <object Name="EliteSpawnController" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteSpawnController" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+    <tag Name="NoSparkingDeath" />
+    <intproperty Name="Indestructible" Value="1" />
+  </object>
+
+  <!-- Direct Spawn Commands (bypasses XML ForceUltimate parsing issues) -->
+  <object Name="spawnelite" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="SpawnEliteCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="spawnultimate" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="SpawnUltimateCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- Natural Spawning Wish Commands -->
+  <object Name="elitespawn:status" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteSpawnStatusCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="elitespawn:toggle" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteSpawnToggleCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="elitespawn:reset" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteSpawnResetCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- Direct tier-forced spawn commands -->
+  <object Name="spawnelite" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="SpawnEliteCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <object Name="spawnultimate" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="SpawnUltimateCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- ===== ELITE ARMY SPAWNERS ===== -->
+
+  <!-- Base Elite Army Spawner -->
+  <object Name="BaseEliteArmySpawn" Inherits="Object">
+    <part Name="Render" DisplayName="elite army spawn point" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteArmySpawner" />
+    <tag Name="BaseObject" Value="*noinherit" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- Small Squad (2-3 elites) -->
+  <object Name="EliteArmySpawn_Small" Inherits="BaseEliteArmySpawn">
+    <part Name="EliteArmySpawner" ArmyTypeString="SmallSquad" MinPlayerLevel="15" MinZoneTier="5" />
+    <tag Name="Tier" Value="5" />
+  </object>
+
+  <!-- Elite Patrol (4-5 elites) -->
+  <object Name="EliteArmySpawn_Medium" Inherits="BaseEliteArmySpawn">
+    <part Name="EliteArmySpawner" ArmyTypeString="ElitePatrol" MinPlayerLevel="20" MinZoneTier="6" />
+    <tag Name="Tier" Value="6" />
+  </object>
+
+  <!-- Elite Warband (1 ultimate + 4-5 goons) -->
+  <object Name="EliteArmySpawn_Large" Inherits="BaseEliteArmySpawn">
+    <part Name="EliteArmySpawner" ArmyTypeString="EliteWarband" MinPlayerLevel="25" MinZoneTier="7" />
+    <tag Name="Tier" Value="7" />
+  </object>
+
+  <!-- Ultimate Host (2 ultimates + 6-8 goons) -->
+  <object Name="EliteArmySpawn_Epic" Inherits="BaseEliteArmySpawn">
+    <part Name="EliteArmySpawner" ArmyTypeString="UltimateHost" MinPlayerLevel="30" MinZoneTier="8" />
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <!-- Titan Pair (2-3 ultimates, no goons) -->
+  <object Name="EliteArmySpawn_Titans" Inherits="BaseEliteArmySpawn">
+    <part Name="EliteArmySpawner" ArmyTypeString="TitanPair" MinPlayerLevel="35" MinZoneTier="8" />
+    <tag Name="Tier" Value="8" />
+  </object>
+
+  <!-- ===== ELITE ARMY WISH COMMANDS ===== -->
+
+  <!-- elitearmy:status - Show army statistics -->
+  <object Name="elitearmy:status" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteArmyStatusCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitearmy:reset - Reset army tracking -->
+  <object Name="elitearmy:reset" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteArmyResetCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- spawnarmy - Force spawn elite army -->
+  <object Name="spawnarmy" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="SpawnArmyCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- ===== DEBUG WISH COMMANDS ===== -->
+
+  <!-- elitedebug:toggle - Toggle debug mode -->
+  <object Name="elitedebug:toggle" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteDebugToggleCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitedebug:status - Show debug status -->
+  <object Name="elitedebug:status" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteDebugStatusCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitedebug:stats - Show spawn statistics -->
+  <object Name="elitedebug:stats" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteDebugStatsCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitedebug:bypass - Show bypass help -->
+  <object Name="elitedebug:bypass" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteDebugBypassCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- ===== AUTOMATED TEST COMMANDS ===== -->
+
+  <!-- elitetest:full - Run all automated tests -->
+  <object Name="elitetest:full" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteTestFullCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitetest:equipment - Test equipment system -->
+  <object Name="elitetest:equipment" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteTestEquipmentCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitetest:mutations - Test mutation caps -->
+  <object Name="elitetest:mutations" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteTestMutationsCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitetest:multipliers - Test stat multipliers -->
+  <object Name="elitetest:multipliers" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteTestMultipliersCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitetest:armies - Test army compositions -->
+  <object Name="elitetest:armies" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteTestArmiesCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitetest:settings - Test settings system -->
+  <object Name="elitetest:settings" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteTestSettingsCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitetest:spawn - Quick spawn test with stats report -->
+  <object Name="elitetest:spawn" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteTestSpawnCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- ===== QUICK TEST COMMANDS (Visual/Manual Testing) ===== -->
+
+  <!-- elitequick:equipment - Spawns 5 elites with different equipment configurations -->
+  <object Name="elitequick:equipment" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteQuickEquipmentCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitequick:mutations - Spawns 5 elites with different mutation cap configurations -->
+  <object Name="elitequick:mutations" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteQuickMutationsCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitequick:tiers - Spawns 3 elites/ultimates showing tier differences -->
+  <object Name="elitequick:tiers" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteQuickTiersCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitequick:armies - Spawns all 5 army types in sequence -->
+  <object Name="elitequick:armies" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteQuickArmiesCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitequick:stress - Spawn 10 random elites/ultimates to stress test -->
+  <object Name="elitequick:stress" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteQuickStressCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitequick:reset - Reset all settings to defaults and clear all tracking -->
+  <object Name="elitequick:reset" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteQuickResetCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitecleanup - Destroy all elite creatures and clear tracking (fixes lag) -->
+  <object Name="elitecleanup" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteCleanupCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- elitepreset - Apply a difficulty preset -->
+  <object Name="elitepreset" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="ElitePresetCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+  <!-- eliteautopreset - Enable automatic preset application for current character -->
+  <object Name="eliteautopreset" Inherits="Object">
+    <part Name="Render" Visible="false" />
+    <part Name="Physics" IsReal="false" Solid="false" />
+    <part Name="EliteAutoPresetCommand" />
+    <tag Name="ExcludeFromDynamicEncounters" />
+  </object>
+
+</objects>

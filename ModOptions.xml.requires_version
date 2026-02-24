@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<options>
+  <!-- ===== DIFFICULTY PRESET ===== -->
+  <option ID="Option_EliteVariants_DifficultyPreset"
+          DisplayText="Difficulty Preset"
+          Category="Mods: Elite Variants"
+          Type="Combo"
+          Values="Custom|Custom (Manual),Normal|Normal (Balanced),Hard|Hard (Challenging),Brutal|Brutal (Very Hard),Nightmare|Nightmare (Maximum)"
+          Default="Normal">
+    <helptext>Quick difficulty presets. Select 'Custom' to manually configure all settings below.</helptext>
+  </option>
+
+  <!-- ===== CORE SETTINGS (Always visible) ===== -->
+  <option ID="Option_EliteVariants_EnableEliteSpawning"
+          DisplayText="Enable Elite Spawning"
+          Category="Mods: Elite Variants"
+          Type="Checkbox"
+          Default="Yes">
+    <helptext>Master switch for natural elite variant spawning.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_EnableUltimateSpawning"
+          DisplayText="Enable Ultimate Spawning"
+          Category="Mods: Elite Variants"
+          Type="Checkbox"
+          Default="Yes">
+    <helptext>Master switch for natural ultimate variant spawning.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_EnableArmySpawning"
+          DisplayText="Enable Army Spawning"
+          Category="Mods: Elite Variants"
+          Type="Checkbox"
+          Default="Yes">
+    <helptext>Enable elite army encounters (groups of elites/ultimates spawning together).</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_EnableDebugMode"
+          DisplayText="Enable Debug Mode"
+          Category="Mods: Elite Variants"
+          Type="Checkbox"
+          Default="No">
+    <helptext>Enable verbose spawn notifications and testing features.</helptext>
+  </option>
+
+  <!-- ===== CUSTOM SETTINGS (Only visible when preset is Custom) ===== -->
+
+  <!-- Elite Power/HP -->
+  <option ID="Option_EliteVariants_ElitePowerMultiplier"
+          DisplayText="[Elite] Power Multiplier"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="10"
+          Max="30"
+          Increment="5"
+          Default="10">
+    <helptext>Stat/AV/DV scaling for elite variants. 10 = 1.0x, 30 = 3.0x</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_EliteHPMultiplier"
+          DisplayText="[Elite] HP Multiplier"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="10"
+          Max="50"
+          Increment="5"
+          Default="15">
+    <helptext>HP multiplier for elite variants. 10 = 1.0x, 50 = 5.0x</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_EliteEnhancementMultiplier"
+          DisplayText="[Elite] Enhancement Multiplier"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="10"
+          Max="30"
+          Increment="5"
+          Default="10">
+    <helptext>Scales mutations, cybernetics, and equipment. 10 = 1.0x, 30 = 3.0x</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_EliteLevelOffset"
+          DisplayText="[Elite] Level Offset"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="30"
+          Increment="5"
+          Default="0">
+    <helptext>Level bonus added to elite variants.</helptext>
+  </option>
+
+  <!-- Ultimate Power/HP -->
+  <option ID="Option_EliteVariants_UltimatePowerMultiplier"
+          DisplayText="[Ultimate] Power Multiplier"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="10"
+          Max="60"
+          Increment="5"
+          Default="15">
+    <helptext>Stat/AV/DV scaling for ultimate variants. 10 = 1.0x, 60 = 6.0x</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimateHPMultiplier"
+          DisplayText="[Ultimate] HP Multiplier"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="10"
+          Max="100"
+          Increment="10"
+          Default="20">
+    <helptext>HP multiplier for ultimate variants. 10 = 1.0x, 100 = 10.0x</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimateEnhancementMultiplier"
+          DisplayText="[Ultimate] Enhancement Multiplier"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="10"
+          Max="60"
+          Increment="5"
+          Default="15">
+    <helptext>Scales mutations, cybernetics, and equipment. 10 = 1.0x, 60 = 6.0x</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimateLevelOffset"
+          DisplayText="[Ultimate] Level Offset"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="30"
+          Increment="5"
+          Default="5">
+    <helptext>Level bonus added to ultimate variants.</helptext>
+  </option>
+
+  <!-- Spawn Rates -->
+  <option ID="Option_EliteVariants_EliteSpawnRate"
+          DisplayText="[Elite] Spawn Rate"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="5"
+          Max="20"
+          Increment="5"
+          Default="10">
+    <helptext>Frequency multiplier. 5 = 0.5x, 10 = 1.0x, 20 = 2.0x</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimateSpawnRate"
+          DisplayText="[Ultimate] Spawn Rate"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="5"
+          Max="20"
+          Increment="5"
+          Default="10">
+    <helptext>Frequency multiplier. 5 = 0.5x, 10 = 1.0x, 20 = 2.0x</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_ArmySpawnWeight"
+          DisplayText="[Army] Spawn Frequency"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="5"
+          Max="20"
+          Increment="5"
+          Default="10">
+    <helptext>Army encounter frequency. 5 = 0.5x, 10 = 1.0x, 20 = 2.0x</helptext>
+  </option>
+
+  <!-- Spawn Chances -->
+  <option ID="Option_EliteVariants_EliteChance"
+          DisplayText="[Elite] Spawn Chance %"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="5"
+          Max="100"
+          Increment="5"
+          Default="20">
+    <helptext>Percentage chance for a creature to spawn as an elite variant.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimateChance"
+          DisplayText="[Ultimate] Spawn Chance %"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="100"
+          Increment="10"
+          Default="30">
+    <helptext>Percentage chance for an elite to become an ultimate instead.</helptext>
+  </option>
+
+  <!-- Level/Tier Requirements -->
+  <option ID="Option_EliteVariants_MinPlayerLevel"
+          DisplayText="[Elite] Min Player Level"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="1"
+          Max="30"
+          Increment="1"
+          Default="10">
+    <helptext>Minimum player level before elite variants can spawn.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_MinEliteZoneTier"
+          DisplayText="[Elite] Min Zone Tier"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="1"
+          Max="8"
+          Increment="1"
+          Default="4">
+    <helptext>Minimum zone danger tier for elite spawns.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_MinUltimateLevel"
+          DisplayText="[Ultimate] Min Player Level"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="10"
+          Max="40"
+          Increment="5"
+          Default="20">
+    <helptext>Minimum player level before ultimate variants can spawn.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_MinUltimateZoneTier"
+          DisplayText="[Ultimate] Min Zone Tier"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="1"
+          Max="8"
+          Increment="1"
+          Default="6">
+    <helptext>Minimum zone danger tier for ultimate spawns.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_MinPlayerLevelForArmies"
+          DisplayText="[Army] Min Player Level"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="10"
+          Max="40"
+          Increment="5"
+          Default="15">
+    <helptext>Minimum player level before elite armies can spawn.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_MinZoneTierForArmies"
+          DisplayText="[Army] Min Zone Tier"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="4"
+          Max="8"
+          Increment="1"
+          Default="5">
+    <helptext>Minimum zone danger tier for elite army spawns.</helptext>
+  </option>
+
+  <!-- Mutation Caps -->
+  <option ID="Option_EliteVariants_ElitePhysicalMutationCap"
+          DisplayText="[Elite] Physical Mutation Cap"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="20"
+          Increment="1"
+          Default="5">
+    <helptext>Maximum physical mutations. 0 = unlimited. Affected by Enhancement Multiplier.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_EliteMentalMutationCap"
+          DisplayText="[Elite] Mental Mutation Cap"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="20"
+          Increment="1"
+          Default="3">
+    <helptext>Maximum mental mutations. 0 = unlimited. Affected by Enhancement Multiplier.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimatePhysicalMutationCap"
+          DisplayText="[Ultimate] Physical Mutation Cap"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="20"
+          Increment="1"
+          Default="7">
+    <helptext>Maximum physical mutations. 0 = unlimited. Affected by Enhancement Multiplier.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimateMentalMutationCap"
+          DisplayText="[Ultimate] Mental Mutation Cap"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="20"
+          Increment="1"
+          Default="6">
+    <helptext>Maximum mental mutations. 0 = unlimited. Affected by Enhancement Multiplier.</helptext>
+  </option>
+
+  <!-- Equipment Counts -->
+  <option ID="Option_EliteVariants_EliteMinItemCount"
+          DisplayText="[Elite] Min Item Count"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="4"
+          Increment="1"
+          Default="2">
+    <helptext>Minimum equipment items. Max 4 items total (weapon/armor/helmet/boots).</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_EliteMaxItemCount"
+          DisplayText="[Elite] Max Item Count"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="4"
+          Increment="1"
+          Default="4">
+    <helptext>Maximum equipment items. Max 4 items total (weapon/armor/helmet/boots).</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimateMinItemCount"
+          DisplayText="[Ultimate] Min Item Count"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="4"
+          Increment="1"
+          Default="3">
+    <helptext>Minimum equipment items. Max 4 items total (weapon/armor/helmet/boots).</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimateMaxItemCount"
+          DisplayText="[Ultimate] Max Item Count"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="4"
+          Increment="1"
+          Default="4">
+    <helptext>Maximum equipment items. Max 4 items total (weapon/armor/helmet/boots).</helptext>
+  </option>
+
+  <!-- Equipment Tier Chances -->
+  <option ID="Option_EliteVariants_EliteTier8Chance"
+          DisplayText="[Elite] Tier 8 Item %"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="100"
+          Increment="10"
+          Default="40">
+    <helptext>Chance for Tier 8 (zetachrome) items. Tier 6 gets remainder.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_EliteTier7Chance"
+          DisplayText="[Elite] Tier 7 Item %"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="100"
+          Increment="10"
+          Default="40">
+    <helptext>Chance for Tier 7 (crysteel) items. Tier 6 gets remainder.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimateTier8Chance"
+          DisplayText="[Ultimate] Tier 8 Item %"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="100"
+          Increment="10"
+          Default="60">
+    <helptext>Chance for Tier 8 (zetachrome) items. Tier 6 gets remainder.</helptext>
+  </option>
+
+  <option ID="Option_EliteVariants_UltimateTier7Chance"
+          DisplayText="[Ultimate] Tier 7 Item %"
+          Category="Mods: Elite Variants"
+          Requires="Option_EliteVariants_DifficultyPreset==Custom"
+          Type="Slider"
+          Min="0"
+          Max="100"
+          Increment="10"
+          Default="30">
+    <helptext>Chance for Tier 7 (crysteel) items. Tier 6 gets remainder.</helptext>
+  </option>
+</options>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<factions>
+
+  <!-- Elite Collective: Faction for elite variants -->
+  <faction
+    Name="EliteCollective"
+    DisplayName="the Elite Collective"
+    Visible="true"
+    InitialPlayerReputation="0"
+    HistoricalSignificance="0"
+  >
+    <!-- Elite variants are hostile to most but friendly with each other -->
+    <feeling About="*" Value="-25" />
+    <feeling About="EliteCollective" Value="100" />
+    <feeling About="Seekers" Value="50" />
+    <feeling About="Cherubim" Value="25" />
+    <feeling About="Robots" Value="0" />
+
+    <!-- Water ritual option for advanced players -->
+    <waterritual
+      Skill="Discipline_Meditate"
+      SkillCost="100"
+    />
+
+    <factionworshipattitudes Default="0">
+      <factionworshipattitude Name="Girsh" Attitude="-50" />
+      <factionworshipattitude Name="Entropic" Attitude="-50" />
+    </factionworshipattitudes>
+  </faction>
+
+</factions>
