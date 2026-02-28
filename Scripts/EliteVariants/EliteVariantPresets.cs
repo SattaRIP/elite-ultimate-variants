@@ -37,9 +37,9 @@ namespace XRL.World.Parts
 
         private static void ApplyEasyPreset()
         {
-            // Spawn Chances (25% of max)
-            Options.SetOption("Option_EliteVariants_EliteChance", "30");
-            Options.SetOption("Option_EliteVariants_UltimateChance", "25");
+            // Spawn Chances - INCREASED to compensate for lower loot quality
+            Options.SetOption("Option_EliteVariants_EliteChance", "35");
+            Options.SetOption("Option_EliteVariants_UltimateChance", "30");
 
             // Elite: 1.5x/2.0x/1.5x (25% of range)
             Options.SetOption("Option_EliteVariants_ElitePowerMultiplier", "15");
@@ -53,9 +53,9 @@ namespace XRL.World.Parts
             Options.SetOption("Option_EliteVariants_UltimateEnhancementMultiplier", "22");
             Options.SetOption("Option_EliteVariants_UltimateLevelOffset", "8");
 
-            // Spawn rates (25% of range)
-            Options.SetOption("Option_EliteVariants_EliteSpawnRate", "9");
-            Options.SetOption("Option_EliteVariants_UltimateSpawnRate", "9");
+            // Spawn rates - INCREASED
+            Options.SetOption("Option_EliteVariants_EliteSpawnRate", "11");
+            Options.SetOption("Option_EliteVariants_UltimateSpawnRate", "11");
 
             // Mutation caps (25% of max)
             Options.SetOption("Option_EliteVariants_ElitePhysicalMutationCap", "5");
@@ -63,15 +63,15 @@ namespace XRL.World.Parts
             Options.SetOption("Option_EliteVariants_UltimatePhysicalMutationCap", "5");
             Options.SetOption("Option_EliteVariants_UltimateMentalMutationCap", "5");
 
-            // Equipment (fewer items, lower tiers)
-            Options.SetOption("Option_EliteVariants_EliteMinItemCount", "0");
-            Options.SetOption("Option_EliteVariants_EliteMaxItemCount", "2");
-            Options.SetOption("Option_EliteVariants_EliteTier8Chance", "10");
-            Options.SetOption("Option_EliteVariants_EliteTier7Chance", "30");
-            Options.SetOption("Option_EliteVariants_UltimateMinItemCount", "1");
-            Options.SetOption("Option_EliteVariants_UltimateMaxItemCount", "2");
-            Options.SetOption("Option_EliteVariants_UltimateTier8Chance", "20");
-            Options.SetOption("Option_EliteVariants_UltimateTier7Chance", "40");
+            // Equipment - MORE items, HIGHER tier 7 to compensate
+            Options.SetOption("Option_EliteVariants_EliteMinItemCount", "1");
+            Options.SetOption("Option_EliteVariants_EliteMaxItemCount", "3");
+            Options.SetOption("Option_EliteVariants_EliteTier8Chance", "1");
+            Options.SetOption("Option_EliteVariants_EliteTier7Chance", "40");
+            Options.SetOption("Option_EliteVariants_UltimateMinItemCount", "2");
+            Options.SetOption("Option_EliteVariants_UltimateMaxItemCount", "3");
+            Options.SetOption("Option_EliteVariants_UltimateTier8Chance", "5");
+            Options.SetOption("Option_EliteVariants_UltimateTier7Chance", "50");
 
             // Requirements (INVERSE - higher values = easier, spawn later)
             Options.SetOption("Option_EliteVariants_MinPlayerLevel", "23");
@@ -87,9 +87,9 @@ namespace XRL.World.Parts
 
         private static void ApplyNormalPreset()
         {
-            // Spawn Chances (50% of max)
-            Options.SetOption("Option_EliteVariants_EliteChance", "50");
-            Options.SetOption("Option_EliteVariants_UltimateChance", "50");
+            // Spawn Chances - INCREASED
+            Options.SetOption("Option_EliteVariants_EliteChance", "60");
+            Options.SetOption("Option_EliteVariants_UltimateChance", "60");
 
             // Elite: 2.0x/3.0x/2.0x (50% of range)
             Options.SetOption("Option_EliteVariants_ElitePowerMultiplier", "20");
@@ -103,9 +103,9 @@ namespace XRL.World.Parts
             Options.SetOption("Option_EliteVariants_UltimateEnhancementMultiplier", "35");
             Options.SetOption("Option_EliteVariants_UltimateLevelOffset", "15");
 
-            // Spawn rates (50% of range)
-            Options.SetOption("Option_EliteVariants_EliteSpawnRate", "12");
-            Options.SetOption("Option_EliteVariants_UltimateSpawnRate", "12");
+            // Spawn rates - INCREASED
+            Options.SetOption("Option_EliteVariants_EliteSpawnRate", "14");
+            Options.SetOption("Option_EliteVariants_UltimateSpawnRate", "14");
 
             // Mutation caps (50% of max)
             Options.SetOption("Option_EliteVariants_ElitePhysicalMutationCap", "10");
@@ -113,15 +113,15 @@ namespace XRL.World.Parts
             Options.SetOption("Option_EliteVariants_UltimatePhysicalMutationCap", "10");
             Options.SetOption("Option_EliteVariants_UltimateMentalMutationCap", "10");
 
-            // Equipment (balanced)
-            Options.SetOption("Option_EliteVariants_EliteMinItemCount", "1");
-            Options.SetOption("Option_EliteVariants_EliteMaxItemCount", "3");
-            Options.SetOption("Option_EliteVariants_EliteTier8Chance", "30");
-            Options.SetOption("Option_EliteVariants_EliteTier7Chance", "40");
-            Options.SetOption("Option_EliteVariants_UltimateMinItemCount", "2");
-            Options.SetOption("Option_EliteVariants_UltimateMaxItemCount", "3");
-            Options.SetOption("Option_EliteVariants_UltimateTier8Chance", "50");
-            Options.SetOption("Option_EliteVariants_UltimateTier7Chance", "35");
+            // Equipment - MORE items, HIGHER tier 7
+            Options.SetOption("Option_EliteVariants_EliteMinItemCount", "2");
+            Options.SetOption("Option_EliteVariants_EliteMaxItemCount", "4");
+            Options.SetOption("Option_EliteVariants_EliteTier8Chance", "1");
+            Options.SetOption("Option_EliteVariants_EliteTier7Chance", "50");
+            Options.SetOption("Option_EliteVariants_UltimateMinItemCount", "3");
+            Options.SetOption("Option_EliteVariants_UltimateMaxItemCount", "4");
+            Options.SetOption("Option_EliteVariants_UltimateTier8Chance", "5");
+            Options.SetOption("Option_EliteVariants_UltimateTier7Chance", "60");
 
             // Requirements (INVERSE - mid values)
             Options.SetOption("Option_EliteVariants_MinPlayerLevel", "16");
@@ -137,9 +137,9 @@ namespace XRL.World.Parts
 
         private static void ApplyHardPreset()
         {
-            // Spawn Chances (75% of max)
-            Options.SetOption("Option_EliteVariants_EliteChance", "75");
-            Options.SetOption("Option_EliteVariants_UltimateChance", "75");
+            // Spawn Chances - INCREASED to compensate
+            Options.SetOption("Option_EliteVariants_EliteChance", "80");
+            Options.SetOption("Option_EliteVariants_UltimateChance", "80");
 
             // Elite: 2.5x/4.0x/2.5x (75% of range)
             Options.SetOption("Option_EliteVariants_ElitePowerMultiplier", "25");
@@ -153,9 +153,9 @@ namespace XRL.World.Parts
             Options.SetOption("Option_EliteVariants_UltimateEnhancementMultiplier", "48");
             Options.SetOption("Option_EliteVariants_UltimateLevelOffset", "22");
 
-            // Spawn rates (75% of range)
-            Options.SetOption("Option_EliteVariants_EliteSpawnRate", "16");
-            Options.SetOption("Option_EliteVariants_UltimateSpawnRate", "16");
+            // Spawn rates - INCREASED
+            Options.SetOption("Option_EliteVariants_EliteSpawnRate", "17");
+            Options.SetOption("Option_EliteVariants_UltimateSpawnRate", "17");
 
             // Mutation caps (75% of max)
             Options.SetOption("Option_EliteVariants_ElitePhysicalMutationCap", "15");
@@ -163,15 +163,15 @@ namespace XRL.World.Parts
             Options.SetOption("Option_EliteVariants_UltimatePhysicalMutationCap", "15");
             Options.SetOption("Option_EliteVariants_UltimateMentalMutationCap", "15");
 
-            // Equipment (more items, higher tiers)
-            Options.SetOption("Option_EliteVariants_EliteMinItemCount", "2");
-            Options.SetOption("Option_EliteVariants_EliteMaxItemCount", "4");
-            Options.SetOption("Option_EliteVariants_EliteTier8Chance", "50");
-            Options.SetOption("Option_EliteVariants_EliteTier7Chance", "35");
-            Options.SetOption("Option_EliteVariants_UltimateMinItemCount", "3");
-            Options.SetOption("Option_EliteVariants_UltimateMaxItemCount", "4");
-            Options.SetOption("Option_EliteVariants_UltimateTier8Chance", "70");
-            Options.SetOption("Option_EliteVariants_UltimateTier7Chance", "25");
+            // Equipment - MORE items, HIGHER tier 7 to compensate
+            Options.SetOption("Option_EliteVariants_EliteMinItemCount", "3");
+            Options.SetOption("Option_EliteVariants_EliteMaxItemCount", "5");
+            Options.SetOption("Option_EliteVariants_EliteTier8Chance", "1");
+            Options.SetOption("Option_EliteVariants_EliteTier7Chance", "60");
+            Options.SetOption("Option_EliteVariants_UltimateMinItemCount", "4");
+            Options.SetOption("Option_EliteVariants_UltimateMaxItemCount", "5");
+            Options.SetOption("Option_EliteVariants_UltimateTier8Chance", "5");
+            Options.SetOption("Option_EliteVariants_UltimateTier7Chance", "70");
 
             // Requirements (INVERSE - lower values = earlier spawns = harder)
             Options.SetOption("Option_EliteVariants_MinPlayerLevel", "8");
@@ -187,9 +187,9 @@ namespace XRL.World.Parts
 
         private static void ApplyBrutalPreset()
         {
-            // Spawn Chances (87.5% of max)
-            Options.SetOption("Option_EliteVariants_EliteChance", "90");
-            Options.SetOption("Option_EliteVariants_UltimateChance", "90");
+            // Spawn Chances - INCREASED to compensate
+            Options.SetOption("Option_EliteVariants_EliteChance", "95");
+            Options.SetOption("Option_EliteVariants_UltimateChance", "95");
 
             // Elite: 2.8x/4.5x/2.8x (87.5% of range)
             Options.SetOption("Option_EliteVariants_ElitePowerMultiplier", "28");
@@ -203,9 +203,9 @@ namespace XRL.World.Parts
             Options.SetOption("Option_EliteVariants_UltimateEnhancementMultiplier", "54");
             Options.SetOption("Option_EliteVariants_UltimateLevelOffset", "26");
 
-            // Spawn rates (87.5% of range)
-            Options.SetOption("Option_EliteVariants_EliteSpawnRate", "18");
-            Options.SetOption("Option_EliteVariants_UltimateSpawnRate", "18");
+            // Spawn rates - INCREASED
+            Options.SetOption("Option_EliteVariants_EliteSpawnRate", "19");
+            Options.SetOption("Option_EliteVariants_UltimateSpawnRate", "19");
 
             // Mutation caps (87.5% of max)
             Options.SetOption("Option_EliteVariants_ElitePhysicalMutationCap", "18");
@@ -213,15 +213,15 @@ namespace XRL.World.Parts
             Options.SetOption("Option_EliteVariants_UltimatePhysicalMutationCap", "18");
             Options.SetOption("Option_EliteVariants_UltimateMentalMutationCap", "18");
 
-            // Equipment (near maximum)
-            Options.SetOption("Option_EliteVariants_EliteMinItemCount", "3");
-            Options.SetOption("Option_EliteVariants_EliteMaxItemCount", "4");
-            Options.SetOption("Option_EliteVariants_EliteTier8Chance", "70");
-            Options.SetOption("Option_EliteVariants_EliteTier7Chance", "25");
-            Options.SetOption("Option_EliteVariants_UltimateMinItemCount", "4");
-            Options.SetOption("Option_EliteVariants_UltimateMaxItemCount", "4");
-            Options.SetOption("Option_EliteVariants_UltimateTier8Chance", "85");
-            Options.SetOption("Option_EliteVariants_UltimateTier7Chance", "15");
+            // Equipment - MORE items, HIGHER tier 7 to compensate
+            Options.SetOption("Option_EliteVariants_EliteMinItemCount", "4");
+            Options.SetOption("Option_EliteVariants_EliteMaxItemCount", "5");
+            Options.SetOption("Option_EliteVariants_EliteTier8Chance", "1");
+            Options.SetOption("Option_EliteVariants_EliteTier7Chance", "70");
+            Options.SetOption("Option_EliteVariants_UltimateMinItemCount", "5");
+            Options.SetOption("Option_EliteVariants_UltimateMaxItemCount", "5");
+            Options.SetOption("Option_EliteVariants_UltimateTier8Chance", "5");
+            Options.SetOption("Option_EliteVariants_UltimateTier7Chance", "80");
 
             // Requirements (INVERSE - very low values = very early spawns)
             Options.SetOption("Option_EliteVariants_MinPlayerLevel", "5");
@@ -263,15 +263,15 @@ namespace XRL.World.Parts
             Options.SetOption("Option_EliteVariants_UltimatePhysicalMutationCap", "0");
             Options.SetOption("Option_EliteVariants_UltimateMentalMutationCap", "0");
 
-            // Equipment (maximum - all items, all Tier 8)
-            Options.SetOption("Option_EliteVariants_EliteMinItemCount", "4");
-            Options.SetOption("Option_EliteVariants_EliteMaxItemCount", "4");
-            Options.SetOption("Option_EliteVariants_EliteTier8Chance", "100");
-            Options.SetOption("Option_EliteVariants_EliteTier7Chance", "0");
-            Options.SetOption("Option_EliteVariants_UltimateMinItemCount", "4");
-            Options.SetOption("Option_EliteVariants_UltimateMaxItemCount", "4");
-            Options.SetOption("Option_EliteVariants_UltimateTier8Chance", "100");
-            Options.SetOption("Option_EliteVariants_UltimateTier7Chance", "0");
+            // Equipment - MAXIMUM items, VERY HIGH tier 7 to compensate for low tier 8
+            Options.SetOption("Option_EliteVariants_EliteMinItemCount", "5");
+            Options.SetOption("Option_EliteVariants_EliteMaxItemCount", "6");
+            Options.SetOption("Option_EliteVariants_EliteTier8Chance", "1");
+            Options.SetOption("Option_EliteVariants_EliteTier7Chance", "80");
+            Options.SetOption("Option_EliteVariants_UltimateMinItemCount", "6");
+            Options.SetOption("Option_EliteVariants_UltimateMaxItemCount", "6");
+            Options.SetOption("Option_EliteVariants_UltimateTier8Chance", "5");
+            Options.SetOption("Option_EliteVariants_UltimateTier7Chance", "90");
 
             // Requirements (INVERSE - minimum values = earliest possible spawns)
             Options.SetOption("Option_EliteVariants_MinPlayerLevel", "1");
