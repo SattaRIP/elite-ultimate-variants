@@ -373,6 +373,10 @@ Use `elitecleanup` wish command to destroy all elite creatures and clear trackin
 
 Created by mythraps for Caves of Qud
 
+## Support
+
+If you enjoy this mod, consider supporting me on [Patreon](https://www.patreon.com/c/mythraps)!
+
 ## Version History
 
 ### v1.0.0 (Initial Release)
